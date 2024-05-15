@@ -4,7 +4,7 @@ return{
 		local dap = require("dap")
 		dap.adapters.coreclr = {
 			type = "executable",
-			command = "C:\\netcoredbg\\netcoredbg.exe",
+			command = "netcoredbg",
 			args = {"--interpreter=vscode"}
 		}
 		dap.configurations.cs = {

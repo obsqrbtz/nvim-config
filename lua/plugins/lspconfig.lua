@@ -16,36 +16,26 @@ return {
         require("mason").setup({
             PATH = "prepend", -- "skip" seems to cause the spawning error
         })
-        local caps = require("cmp_nvim_lsp")
+				local caps = require("cmp_nvim_lsp")
             .default_capabilities(vim.lsp.protocol
             .make_client_capabilities())
         require("mason-lspconfig").setup({
-           -- require("lspconfig")["omnisharp"].setup({
-           --     capabilities = caps,
-           --    cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
-           --     enable_import_completion = true,
-           --     organize_imports_on_format = true,
-           --     enable_roslyn_analyzers = true,
-           --     root_dir = function ()
-           --         return vim.loop.cwd() -- current working directory
-           --     end,
-           -- }),
-					  require("lspconfig")["csharp_ls"].setup({}),
-            require("lspconfig")["lua_ls"].setup({
-                settings = {
-                },
-            }),
-            require("lspconfig")["pylsp"].setup({
-                capabilities = caps,
-            }),
-            ensure_installed = {
-                "lua_ls",
-                "pylsp",
-                "omnisharp"
-            },
-            automatic_installation = true,
-        })
-        require("fidget").setup()
+					 require("lspconfig")["csharp_ls"].setup({}),
+					 require("lspconfig")["lua_ls"].setup({
+						 settings = {
+						 },
+					 }),
+					 require("lspconfig")["pylsp"].setup({
+						 capabilities = caps,
+					 }),
+					 ensure_installed = {
+						 "lua_ls",
+						 "pylsp",
+						 "omnisharp"
+					 },
+					 automatic_installation = true,
+				})
+				require("fidget").setup()
         -- Set up cool signs for diagnostics
         local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
         for type, icon in pairs(signs) do
