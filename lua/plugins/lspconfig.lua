@@ -20,16 +20,17 @@ return {
             .default_capabilities(vim.lsp.protocol
             .make_client_capabilities())
         require("mason-lspconfig").setup({
-            require("lspconfig")["omnisharp"].setup({
-                capabilities = caps,
-                cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
-                enable_import_completion = true,
-                organize_imports_on_format = true,
-                enable_roslyn_analyzers = true,
-                root_dir = function ()
-                    return vim.loop.cwd() -- current working directory
-                end,
-            }),
+           -- require("lspconfig")["omnisharp"].setup({
+           --     capabilities = caps,
+           --    cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+           --     enable_import_completion = true,
+           --     organize_imports_on_format = true,
+           --     enable_roslyn_analyzers = true,
+           --     root_dir = function ()
+           --         return vim.loop.cwd() -- current working directory
+           --     end,
+           -- }),
+					  require("lspconfig")["csharp_ls"].setup({}),
             require("lspconfig")["lua_ls"].setup({
                 settings = {
                 },

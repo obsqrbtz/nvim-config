@@ -1,10 +1,8 @@
 -- deps:
 --  BurntSushi/ripgrep
 --  sharkdp/fd
---  Nerd font
-
--- todo:
---  add treesitter dep for telescope
+--  csharp-ls (dotnet tool install --global csharp-ls)
+--  any nerd font
 
 require('base.search')
 require('base.tabs')
