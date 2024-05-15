@@ -7,7 +7,7 @@
 	```bash
 	dotnet tool install --global csharp-ls
 	```
-- [netcoredbg](https://github.com/razzmatazz/csharp-language-server) - for .NET debugging
+- [netcoredbg](https://github.com/Samsung/netcoredbg) - for .NET debugging
 - a `C` compiler for compiling treesitter parsers
 		
 	```
