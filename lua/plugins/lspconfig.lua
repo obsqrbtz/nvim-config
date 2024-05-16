@@ -28,10 +28,12 @@ return {
 			require("lspconfig")["pylsp"].setup({
 				capabilities = caps,
 			}),
+			require("lspconfig")["clangd"].setup({}),
 			ensure_installed = {
 				"lua_ls",
 				"pylsp",
-				"omnisharp"
+				"csharp_ls",
+				"clangd"
 			},
 			automatic_installation = true,
 		})
