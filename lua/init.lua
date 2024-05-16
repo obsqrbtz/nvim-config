@@ -4,6 +4,7 @@
 --  csharp-ls (dotnet tool install --global csharp-ls)
 --  any nerd font
 
+require('keys.mainkeys')
 require('keys.pluginkeys')
 require('base.search')
 require('base.tabs')
