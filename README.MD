@@ -13,4 +13,6 @@
 	```
 	"cc", "gcc", "clang", "cl", "zig"
 	```
+- clangd - c++, c and rust debugging (not configured properly yet, remove from `lspconfig.lua` if you are not going to set it up youreself)
+- llddb-vscode (same as previous entry - remove is are not going to mess with configs. AUR package is broken, so manual intervention is needed)
 - any nerd font
