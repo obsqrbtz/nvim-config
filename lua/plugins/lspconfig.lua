@@ -20,20 +20,68 @@ return {
 				.default_capabilities(vim.lsp.protocol
 					.make_client_capabilities())
 		require("mason-lspconfig").setup({
-			require("lspconfig")["csharp_ls"].setup({}),
+			require("lspconfig")["csharp_ls"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["bashls"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["cssls"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["neocmake"].setup({
+				capabilities = caps
+			}),
 			require("lspconfig")["lua_ls"].setup({
+				capabilities = caps,
 				settings = {
 				},
 			}),
 			require("lspconfig")["pylsp"].setup({
-				capabilities = caps,
+				capabilities = caps
+			}),
+			require("lspconfig")["html"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["tsserver"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["marksman"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["mesonlsp"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["rust_analyzer"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["svelte"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["tailwindcss"].setup({
+				capabilities = caps
+			}),
+			require("lspconfig")["gitlab_ci_ls"].setup({
+				capabilities = caps
 			}),
 			require("lspconfig")["clangd"].setup({}),
+			capabilities = caps,
 			ensure_installed = {
 				"lua_ls",
 				"pylsp",
 				"csharp_ls",
-				"clangd"
+				"clangd",
+				"bashls",
+				"neocmake",
+				"cssls",
+				"html",
+				"gitlab_ci_ls",
+				"tsserver",
+				"marksman",
+				"mesonlsp",
+				"rust_analyzer",
+				"svelte",
+				"tailwindcss"
 			},
 			automatic_installation = true,
 		})
