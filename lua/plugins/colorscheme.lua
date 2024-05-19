@@ -1,10 +1,9 @@
 return {
-    { "ellisonleao/gruvbox.nvim" },
-  
+    { "kepano/flexoki-neovim" },
     {
       "LazyVim/LazyVim",
       opts = {
-        colorscheme = "gruvbox",
+				colorscheme = "flexoki-dark",
       },
     }
-  }
+}

@@ -19,3 +19,5 @@ if not ok then
 end
 
 lazy.setup("plugins")
+
+vim.cmd [[hi Normal ctermbg=none guibg=none]]
